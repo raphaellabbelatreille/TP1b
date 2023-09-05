@@ -3,6 +3,9 @@
 
 
 /* Général */
+* {
+    box-sizing: border-box;
+}
 :root {
     color: white;
 }
@@ -11,28 +14,51 @@ body {
     font-family: "Montserrat", "Helvetica", Arial, sans-serif;
 }
 .contenu {
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 100px;
+    margin-right: 100px;
     display: block;
-
+}
+h1 {
+    font-size: 3em;
 }
 
 /* Entête */
-.parent {
+.parent_bannière {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     flex-wrap: wrap;
     }
-    .div1 { grid-area: 1 / 1 / 4 / 3; }
-    .div4 { 
+    .div_bannière {
+        position: relative; 
+        grid-area: 1 / 1 / 4 / 3; 
+        padding-left: 24px;
+    }
+    .text_90o {
+        position:absolute;
+        left:-15px;
+        bottom: 0;
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+        font-style: italic;
+    }
+    .div_titre { grid-area: 1 / 3 / 2 / 5; }
+    .titre_bannière {
+        font-size: 32px;
+        font-weight: 500;
+        -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #F1F1F1;
+    -webkit-text-fill-color: transparent;
+    }
+    .div_autheur { grid-area: 2 / 3 / 3 / 5; }
+    .div_Play { 
         grid-area: 3 / 3 / 4 / 4; 
     }
-    .div5 { grid-area: 3 / 4 / 4 / 5; }
-    .div2 { grid-area: 1 / 3 / 2 / 5; }
-    .div3 { grid-area: 2 / 3 / 3 / 5; }
+    .div_lien { grid-area: 3 / 4 / 4 / 5; }
+    
+    
     
 
 
@@ -46,12 +72,31 @@ body {
 
 .track_li {
     flex-direction: column;
-    width:max-content
+    width:max-content;
+    display: table-row;
+
+}
+.track_number {
+    width: 35px
+}
+.track_button {
+    width: 35px;
+    height: 100%
 }
 
 .table_button {
-    width: 24px; 
+    width: 35px;
     height: 24px;
+    display: inline-block;
+    
+    text-align: center;
+
+    fill: rgb(255, 255, 255) ;
+    transform: 
+}
+
+.track_time {
+    width:auto
 }
 
 
@@ -60,4 +105,22 @@ body {
 footer {
     display: flex;
     flex-wrap: wrap;
+    margin: 100px
 }
+
+.parent_nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
+    }
+    
+    .div1 { grid-area: 1 / 1 / 2 / 2; }
+    .div2 { grid-area: 2 / 1 / 3 / 2; }
+    .div3 { grid-area: 3 / 1 / 4 / 2; }
+    .div4 { grid-area: 4 / 1 / 5 / 2; }
+    .div5 { grid-area: 5 / 1 / 6 / 2; }
+    .div6 { grid-area: 1 / 2 / 2 / 3; }
+    .div7 { grid-area: 2 / 2 / 3 / 3; }
+    .div8 { grid-area: 1 / 3 / 6 / 4; }
