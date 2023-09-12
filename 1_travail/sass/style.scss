@@ -5,6 +5,7 @@
 /* Général */
 * {
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
 }
 :root {
     color: white;
@@ -49,7 +50,7 @@ h1 {
     width: 24px;
     height: 24px;
     fill: #F1F1F1;
-    top: 3px;
+  
 }
 
 
@@ -109,13 +110,15 @@ h1 {
     
 /*Streaming */
 .streaming {
-    .streamin_list {
-        flex-direction: column;
-        justify-content: space-between;
-        width:max-content;
+    .streaming_list {
+        flex-direction: row;
+        justify-content: left;
+        width:1000px;
         display: inline-flex;
         div {
-            width:20px
+            padding: 1em;
+            border: 2px solid lightgray;
+            
         }
     }
 }
@@ -126,17 +129,21 @@ h1 {
 /* Table TrackList */
 .trackeur_table {
     width: 100%;
-    font-size: 18px;
+    td {
+        padding: 1em;
+            border: 2px solid lightgray;
+    }
     .track_tr {
         flex-direction: column;
         width:max-content;
         display: table-row;
+        
     }
     .track_number, .track_button {
-        width: 35px
+        width: 35px;
+            
     }
     .track_button {
-        height: 100%
     }
     .table_button {
         display: inline-block;

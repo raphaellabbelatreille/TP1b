@@ -2,6 +2,7 @@
 /* Général */
 * {
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
 
 :root {
@@ -54,7 +55,6 @@ h1 {
   width: 24px;
   height: 24px;
   fill: #F1F1F1;
-  top: 3px;
 }
 
 /* Entête */
@@ -110,21 +110,24 @@ h1 {
 }
 
 /*Streaming */
-.streaming .streamin_list {
-  flex-direction: column;
-  justify-content: space-between;
-  width: -moz-max-content;
-  width: max-content;
+.streaming .streaming_list {
+  flex-direction: row;
+  justify-content: left;
+  width: 1000px;
   display: inline-flex;
 }
-.streaming .streamin_list div {
-  width: 20px;
+.streaming .streaming_list div {
+  padding: 1em;
+  border: 2px solid lightgray;
 }
 
 /* Table TrackList */
 .trackeur_table {
   width: 100%;
-  font-size: 18px;
+}
+.trackeur_table td {
+  padding: 1em;
+  border: 2px solid lightgray;
 }
 .trackeur_table .track_tr {
   flex-direction: column;
@@ -134,9 +137,6 @@ h1 {
 }
 .trackeur_table .track_number, .trackeur_table .track_button {
   width: 35px;
-}
-.trackeur_table .track_button {
-  height: 100%;
 }
 .trackeur_table .table_button {
   display: inline-block;
