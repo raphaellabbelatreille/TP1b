@@ -23,14 +23,26 @@ h1 {
   font-size: 3em;
 }
 
+.background-poster {
+  background-image: url("https://cdx.monstercat.com?encoding=webp&amp;url=https%3A%2F%2Fwww.monstercat.com%2Frelease%2FMCLP017%2Fcover%3F2ee434f2-4499-4c30-a937-4aec2b4ac1fc&amp;width=1024");
+  filter: blur(5px) brightness(38%);
+  width: 102%;
+  height: 102%;
+  position: absolute;
+  top: -1%;
+  left: -1%;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+  color: pink;
+}
+
 /* Entête */
 .bandeau {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 30px;
   flex-wrap: wrap;
-  margin-left: 200px;
-  margin-right: 200px;
 }
 
 .div_bannière {
@@ -78,9 +90,8 @@ h1 {
 
 /* Table TrackList */
 .trackeur_table {
-  margin-left: 20px;
-  margin-right: 20px;
   width: 100%;
+  font-size: 18px;
 }
 
 .track_tr {
