@@ -15,6 +15,7 @@ body {
 }
 
 .contenu {
+  padding-top: 40px;
   margin-left: 50px;
   margin-right: 50px;
   display: block;
@@ -63,6 +64,25 @@ h1 {
   fill: #F1F1F1;
 }
 
+/* Header et menu nav */
+.entete {
+  position: fixed;
+  width: 99%;
+  z-index: 2;
+}
+.entete .entete_nav {
+  display: grid;
+  grid-template-columns: 120px 1fr 120px;
+}
+.entete .entete_nav .entete_logo {
+  grid-column: 1/2;
+}
+.entete .entete_nav .entete_menu {
+  justify-self: right;
+  grid-column: 3/4;
+}
+
+/* Bon burger */
 /* Entête */
 .bandeau {
   display: grid;

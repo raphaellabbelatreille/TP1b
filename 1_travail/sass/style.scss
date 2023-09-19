@@ -15,6 +15,7 @@ body {
     font-family: "Montserrat", "Helvetica", Arial, sans-serif;
 }
 .contenu {
+    padding-top: 40px;
     margin-left: 50px;
     margin-right: 50px;
     display: block;
@@ -28,6 +29,7 @@ body {
         margin-right: auto;
     }
 }
+
 h1 {
     font-size: 3em;
 }
@@ -58,7 +60,36 @@ h1 {
         width: 50px;
         fill: #F1F1F1;
 
+}
+
+
+/* Header et menu nav */
+.entete {
+    position:fixed;
+    width: 99%;
+    z-index: 2;
+    .entete_nav {
+        display: grid;
+        grid-template-columns: 120px 1fr 120px;
+        .entete_logo {
+            grid-column: 1/2;
+        }
+        .entete_menu {
+            justify-self: right;
+            grid-column: 3/4;
+            
+        }
     }
+  }
+/* Bon burger */
+.nav_burger {
+    
+}            
+
+
+
+
+
 
 /* Entête */
 .bandeau {
