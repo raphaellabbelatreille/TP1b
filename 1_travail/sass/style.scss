@@ -47,12 +47,18 @@ h1 {
 
 }
 .icon {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     fill: #F1F1F1;
+    
   
 }
+.player{ 
+        height:20px;
+        width: 50px;
+        fill: #F1F1F1;
 
+    }
 
 /* Entête */
 .bandeau {
@@ -91,7 +97,8 @@ h1 {
             grid-area: 1/1 / 1/2;
             font-size: 32px;
             font-weight: 500;
-            text-align: start ;
+            padding-top: auto;
+            padding-bottom: 0;
             
             -webkit-text-stroke-width: 1px;
             -webkit-text-stroke-color: #F1F1F1;
@@ -104,7 +111,6 @@ h1 {
             flex-direction: row;
             grid-area: auto; 
             height:100px;
-            color: aqua;
         }
     }
     
@@ -130,8 +136,10 @@ h1 {
 .trackeur_table {
     width: 100%;
     td {
-        padding: 1em;
+        padding-left: 1em;
+        padding-right: 1em;
             border: 2px solid lightgray;
+            height: 80px
     }
     .track_tr {
         flex-direction: column;
