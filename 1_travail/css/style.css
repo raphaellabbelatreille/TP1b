@@ -5,6 +5,10 @@
   -webkit-font-smoothing: antialiased;
 }
 
+html {
+  padding: 0px 0px 0px 0px;
+}
+
 :root {
   color: white;
 }
@@ -15,22 +19,22 @@ body {
 }
 
 .contenu {
-  padding-top: 40px;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
   display: block;
+  max-width: 535px;
 }
-@media (min-width: 600px) {
+@media (min-width: 760px) {
   .contenu {
-    margin-left: 100px;
-    margin-right: 100px;
+    width: 800px;
+    margin-top: 100px;
   }
 }
 @media (min-width: 1000px) {
   .contenu {
-    width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 1300px;
+    margin-top: 200px;
   }
 }
 
@@ -41,9 +45,9 @@ h1 {
 .background-poster {
   background-image: url("https://cdx.monstercat.com?encoding=webp&amp;url=https%3A%2F%2Fwww.monstercat.com%2Frelease%2FMCLP017%2Fcover%3F2ee434f2-4499-4c30-a937-4aec2b4ac1fc&amp;width=1024");
   filter: blur(5px) brightness(38%);
-  width: 102%;
-  height: 102%;
-  position: absolute;
+  width: 100%;
+  height: 100%;
+  position: fixed;
   top: -1%;
   left: -1%;
   background-position: center;
@@ -67,12 +71,19 @@ h1 {
 /* Header et menu nav */
 .entete {
   position: fixed;
-  width: 99%;
+  top: 5px;
+  left: 0px;
+  right: 0px;
   z-index: 2;
 }
 .entete .entete_nav {
   display: grid;
-  grid-template-columns: 120px 1fr 120px;
+  background-color: grey;
+}
+@media (min-width: 1200px) {
+  .entete .entete_nav {
+    grid-template-columns: 1fr 3fr 1fr;
+  }
 }
 .entete .entete_nav .entete_logo {
   grid-column: 1/2;
@@ -83,23 +94,68 @@ h1 {
 }
 
 /* Bon burger */
+.burger_premier .burger_poignee {
+  width: 80px;
+  height: 80px;
+}
+
+.burger_page .burger_top .burger_logo {
+  width: 180px;
+}
+.burger_page .burger_top .burger_close {
+  position: absolute;
+  right: 10%;
+}
+.burger_page .burger_middle .burger_ul {
+  list-style: none;
+}
+.burger_page .burger_middle .burger_ul .burger_li .burger_h3 {
+  color: #F1F1F1;
+  text-decoration: none;
+}
+.burger_page .burger_middle .burger_ul .burger_li .burger_lien {
+  text-decoration: none;
+  color: #F1F1F1;
+}
+.burger_page .burger_middle .burger_ul .burger_li ul {
+  list-style: none;
+}
 /* Entête */
 .bandeau {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-column-gap: 30px;
   flex-wrap: wrap;
+}
+@media (min-width: 1000px) {
+  .bandeau {
+    grid-template-columns: 500px 500px;
+  }
 }
 
 .div_bannière {
   position: relative;
-  grid-area: 1/1/1/2;
+  width: 100%;
   padding-left: 24px;
-  width: 50%;
+  grid-column: 1/1;
+}
+@media (min-width: 1000px) {
+  .div_bannière {
+    grid-area: 1/1/1/2;
+    width: 100%;
+  }
+}
+.div_bannière .image_album {
+  width: 100%;
+}
+@media (min-width: 660px) {
+  .div_bannière .image_album {
+    width: 535px;
+  }
 }
 @media (min-width: 1000px) {
   .div_bannière .image_album {
-    width: 400px;
+    width: 100%;
   }
 }
 .div_bannière .text_90o {
@@ -114,6 +170,12 @@ h1 {
 .bandeau_conteneur {
   display: grid;
   grid-template-rows: 1fr 100px 100px;
+}
+@media (min-width: 1000px) {
+  .bandeau_conteneur {
+    grid-area: 2/2/1/2;
+    width: 30%;
+  }
 }
 .bandeau_conteneur .bandeau_titre {
   grid-area: 1/1/1/2;
